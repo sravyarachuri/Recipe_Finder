@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Finder 🍝</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Hamburger Button -->
+<button class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<!-- Header -->
+<header class="main-header">
+    <h1 class="site-name">RecipeRealm</h1>
+    <p class="tagline">Find, Explore, and Cook Delicious Recipes with a Click!</p>
+</header>
+
+<!-- Hero Section (Home Page) -->
+<section class="hero-home" id="heroSection">
+  <div class="overlay">
+    <h1>Discover Delicious Recipes 🍲</h1>
+    <p>Explore a world of flavors and surprise yourself!</p>
+  </div>
+</section>
+
+<!-- Recipes & Categories Containers -->
+<section id="recipesContainer"></section>
+<section id="categoriesContainer" class="hidden"></section>
+
+<!-- Controls -->
+<section class="controls">
+    <input type="text" id="ingredientInput" placeholder="Enter ingredients (comma separated)">
+    <input type="number" id="maxTime" placeholder="Max cooking time (mins)">
+    <select id="cuisine">
+        <option value="">All Cuisines</option>
+        <option value="Indian">Indian</option>
+        <option value="Italian">Italian</option>
+        <option value="Mexican">Mexican</option>
+    </select>
+    <select id="diet">
+        <option value="">All Diets</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+        <option value="non-vegetarian">Non-Vegetarian</option>
+    </select>
+    <button id="searchBtn">🔍 Search</button>
+    <button id="randomBtn">Secret Recipe!</button>
+</section>
+
+
+<!-- Loading Spinner -->
+<div id="loading" class="hidden">
+  <div class="spinner"></div>
+  <p>Cooking up some delicious recipes...</p>
+</div>
+
+<!-- Recipe Modal -->
+<div id="recipeModal" class="hidden">
+    <div class="modal-content"></div>
+</div>
+
+<!-- Slide-out Side Panel -->
+<div id="sidePanel">
+    <h2>Menu</h2>
+    <button class="side-btn" id="homeBtn">🏠 Home</button>
+    <button class="side-btn" id="allRecipesBtn">🍲 All Recipes</button>
+    <button class="side-btn" id="categoriesBtn">📂 Categories</button>
+    <button class="side-btn" id="favoritesBtn">❤️ Favorites</button>
+    <button class="side-btn" id="aboutBtn">ℹ️ About</button>
+</div>
+
+<!-- Hidden API Key -->
+<input type="hidden" id="apiKey" value="YOUR_API_KEY">
+
+<!-- Confetti library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- Main JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
