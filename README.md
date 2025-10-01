@@ -30,5 +30,11 @@ The project is deployed using **GitHub Pages** making it easily accessible onlin
 
 
 ---
+## 📌 Note for Reviewers / Tutors
 
+For security reasons, the personal Spoonacular API key is not included in this repository.
 
+Until an API key is added, mock recipes are provided so the core features of the application can still be explored and tested.
+If you want to test live, Add your Spoonacular API key in script.js at the placeholder:
+
+const apiKey = "YOUR_API_KEY_HERE";
